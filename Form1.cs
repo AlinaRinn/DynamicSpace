@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
@@ -21,7 +14,7 @@ namespace DynamicSpace
         private void timer1_Tick(object sender, EventArgs e)
         {
             tableLayoutPanel1.Controls.Clear();
-            Form1_Load(sender, e);
+                        Form1_Load(sender, e);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -31,6 +24,10 @@ namespace DynamicSpace
 
             foreach (DriveInfo d in allDrives)
             {
+/*                if (i > 0)
+                {
+                    break;
+                }*/
                 Label lbl1 = new Label();
                 tableLayoutPanel1.Controls.Add(lbl1, 0, i);
                 lbl1.Dock = DockStyle.Right;
